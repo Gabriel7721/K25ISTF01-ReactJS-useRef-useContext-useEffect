@@ -27,6 +27,7 @@ const Timer = () => {
     <div>
       <h1>Thời gian đã trôi qua: {secondsPassed.toFixed(3)}</h1>
       <button onClick={handleStart}>Start</button>
+      <button onClick={handleStop}>Stop</button>
     </div>
   );
 };
