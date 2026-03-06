@@ -6,6 +6,7 @@ import DOM_UseRef from "./components/03.useRef/DOM_UseRef";
 import ScrollIntoView from "./components/03.useRef/ScrollIntoView";
 import Timer from "./components/03.useRef/Timer";
 import TimerUseRef from "./components/03.useRef/Timer-useRef";
+import ClearEffect from "./components/04.useEffect/ClearEffect";
 import Count from "./components/04.useEffect/Count";
 import Counter from "./components/04.useEffect/Counter";
 import FetchApi from "./components/04.useEffect/FetchApi";
@@ -29,7 +30,8 @@ const App = () => {
       {/* <FetchApi /> */}
       {/* <Like /> */}
       {/* <Quote /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <ClearEffect />
     </div>
   );
 };
