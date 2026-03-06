@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const Counter = () => {
+const CounterReRender = () => {
   const [count, setCount] = useState(0);
   function handleClick() {
     // lưu trữ 1 giá trị mà không gây
     // ra re-render
-    count + 1;
+    setCount(count + 1);
   }
-  return <button onClick={handleClick} >Counter</button>;
+  return <button onClick={handleClick}>Counter {count}</button>;
 };
 
-export default Counter;
+export default CounterReRender;

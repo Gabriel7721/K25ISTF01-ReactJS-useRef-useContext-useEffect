@@ -9,6 +9,7 @@ const CounterNotReRender = () => {
     // lưu trữ 1 giá trị mà không gây
     // ra re-render
     ref.current = ref.current + 1;
+    alert(`You clicked ${ref.current} times`);
   }
   return <button onClick={handleClick}>Click me please! {ref.current}</button>;
 };
