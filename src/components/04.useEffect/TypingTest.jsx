@@ -14,13 +14,22 @@ const TypingTest = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    first;
+    if (userInput.length === 1 && !isRunning && !isFinished) {
+      setIsRunning(false);
+    }
+  }, [userInput, isRunning, isFinished]);
+
+  useEffect(() => {
+    if (!isRunning) return;
+    intervalRef.current = setInterval(() => {
+      setSeconds((s) => s + 0.01); // Thời gian lấy theo số thập phân, ví dụ 100.55
+    }, 10);
 
     return () => {
-      second;
+      clearInterval(intervalRef.current);
     };
-  }, [third]);
-  
+  }, [isRunning]);
+
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
