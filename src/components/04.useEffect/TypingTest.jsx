@@ -35,13 +35,16 @@ const TypingTest = () => {
       <h1>Typing Test</h1>
       <div>{renderSampleText()}</div>
       <textarea
+        ref={inputRef}
         rows={3}
         value={userInput}
         onChange={handleChange}
         placeholder="Start typing..."
+        disabled={isFinished}
       />
       <p>Time: {seconds.toFixed(2)}</p>
       <p>Text length: {userInput.length}</p>
+      {isFinished && <p>FINISH!</p>}
     </>
   );
 };
