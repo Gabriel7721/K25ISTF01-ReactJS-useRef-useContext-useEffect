@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-const Timer = () => {
+const TimerUseRef = () => {
   const [startTime, setStartTime] = useState(null);
   const [now, setNow] = useState(null);
   const id = useRef(null); // Stored Interval ID
@@ -32,4 +32,4 @@ const Timer = () => {
   );
 };
 
-export default Timer;
+export default TimerUseRef;

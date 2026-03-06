@@ -3,6 +3,7 @@ import Page from "./components/02.useContext/Page";
 import CounterReRender from "./components/03.useRef/Counter";
 import CounterNotReRender from "./components/03.useRef/CounterNotReRender";
 import Timer from "./components/03.useRef/Timer";
+import TimerUseRef from "./components/03.useRef/Timer-useRef";
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       {/* <Page /> */}
       {/* <CounterNotReRender />
       <CounterReRender /> */}
-      <Timer />
+      {/* <Timer /> */}
+      <TimerUseRef />
     </div>
   );
 };
