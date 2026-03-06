@@ -4,6 +4,7 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    // setCount(count + 1)
     document.title = `${count} times.`;
     console.log(`Called useEffect() ${count} times`);
   }, [count]);
