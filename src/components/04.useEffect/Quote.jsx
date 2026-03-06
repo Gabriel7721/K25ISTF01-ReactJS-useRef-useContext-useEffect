@@ -4,7 +4,7 @@ const Quote = () => {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+    fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/")
       .then((res) => res.json())
       .then((data) => {
         const list = data.messages.personalized;
