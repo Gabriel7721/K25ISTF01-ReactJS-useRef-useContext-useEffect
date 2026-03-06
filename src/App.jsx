@@ -33,7 +33,8 @@ const App = () => {
       {/* <Quote /> */}
       {/* <Counter /> */}
       {/* <ClearEffect /> */}
-      <TypingTest />
+      {/* <TypingTest /> */}
+      <Tasks />
     </div>
   );
 };

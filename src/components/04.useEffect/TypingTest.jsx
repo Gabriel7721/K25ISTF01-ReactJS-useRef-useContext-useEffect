@@ -43,7 +43,7 @@ const TypingTest = () => {
     setUserInput(value);
   };
 
-  const handleReset = (event) => {
+  const handleReset = () => {
     setUserInput("");
     setIsRunning(false);
     setIsFinished(false);
@@ -77,7 +77,7 @@ const TypingTest = () => {
         placeholder="Start typing..."
         disabled={isFinished}
       />
-      
+
       <p>Time: {seconds.toFixed(2)}</p>
       <p>Text length: {userInput.length}</p>
       {isFinished && <p>FINISH!</p>}
