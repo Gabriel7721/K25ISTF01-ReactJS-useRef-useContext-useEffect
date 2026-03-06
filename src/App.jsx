@@ -9,6 +9,8 @@ import TimerUseRef from "./components/03.useRef/Timer-useRef";
 import Count from "./components/04.useEffect/Count";
 import FetchApi from "./components/04.useEffect/FetchApi";
 import Form from "./components/04.useEffect/Form";
+import Like from "./components/04.useEffect/Like";
+import Quote from "./components/04.useEffect/Quote";
 
 const App = () => {
   return (
@@ -23,7 +25,9 @@ const App = () => {
       {/* <ScrollIntoView /> */}
       {/* <Count /> */}
       {/* <Form /> */}
-      <FetchApi />
+      {/* <FetchApi /> */}
+      {/* <Like /> */}
+      <Quote />
     </div>
   );
 };
