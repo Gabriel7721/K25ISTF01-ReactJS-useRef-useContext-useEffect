@@ -39,7 +39,8 @@ const TypingTest = () => {
   }, [userInput, isFinished]);
 
   const handleChange = (event) => {
-    setUserInput(event.target.value);
+    const value = event.target.value.slice(0, SAMPLE_TEXT.length);
+    setUserInput(value);
   };
 
   const handleReset = (event) => {
@@ -67,6 +68,7 @@ const TypingTest = () => {
     <>
       <h1>Typing Test</h1>
       <div>{renderSampleText()}</div>
+
       <textarea
         ref={inputRef}
         rows={3}
@@ -75,6 +77,7 @@ const TypingTest = () => {
         placeholder="Start typing..."
         disabled={isFinished}
       />
+      
       <p>Time: {seconds.toFixed(2)}</p>
       <p>Text length: {userInput.length}</p>
       {isFinished && <p>FINISH!</p>}
