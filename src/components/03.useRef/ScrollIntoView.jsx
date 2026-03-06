@@ -5,22 +5,50 @@ const ScrollIntoView = () => {
   const secondCat = useRef(null);
   const thirdCat = useRef(null);
 
-  function handleScrollToFirst(params) {}
-  function handleScrollToSecond(params) {}
-  function handleScrollToThird(params) {}
+  function handleScrollToFirst() {
+    firstCat.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }
+  function handleScrollToSecond() {
+    secondCat.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }
+  function handleScrollToThird() {
+    thirdCat.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }
 
   return (
-    <ul>
-      <li>
-        <img src="https://placecats.com/neo/300/200?fit=contain" />
-      </li>
-      <li>
-        <img src="https://placecats.com/300/200" />
-      </li>
-      <li>
-        <img src="https://placecats.com/g/300/200" alt="" />
-      </li>
-    </ul>
+    <div>
+      <nav>
+        <button onClick={handleScrollToFirst}>Neo</button>
+        <button onClick={handleScrollToSecond}>Mario</button>
+        <button onClick={handleScrollToThird}>Tommy</button>
+      </nav>
+      <ul>
+        <li>
+          <img
+            src="https://placecats.com/neo/300/200?fit=contain"
+            ref={firstCat}
+          />
+        </li>
+        <li>
+          <img src="https://placecats.com/300/200" ref={secondCat} />
+        </li>
+        <li>
+          <img src="https://placecats.com/g/300/200" ref={thirdCat} />
+        </li>
+      </ul>
+    </div>
   );
 };
 

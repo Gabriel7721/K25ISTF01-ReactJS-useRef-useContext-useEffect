@@ -3,6 +3,7 @@ import Page from "./components/02.useContext/Page";
 import CounterReRender from "./components/03.useRef/Counter";
 import CounterNotReRender from "./components/03.useRef/CounterNotReRender";
 import DOM_UseRef from "./components/03.useRef/DOM_UseRef";
+import ScrollIntoView from "./components/03.useRef/ScrollIntoView";
 import Timer from "./components/03.useRef/Timer";
 import TimerUseRef from "./components/03.useRef/Timer-useRef";
 
@@ -15,7 +16,8 @@ const App = () => {
       <CounterReRender /> */}
       {/* <Timer /> */}
       {/* <TimerUseRef /> */}
-      <DOM_UseRef/>
+      {/* <DOM_UseRef/> */}
+      <ScrollIntoView />
     </div>
   );
 };
