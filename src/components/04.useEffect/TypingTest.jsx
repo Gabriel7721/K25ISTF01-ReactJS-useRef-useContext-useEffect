@@ -9,19 +9,29 @@ const TypingTest = () => {
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
+  const renderSampleText = () => {
+    return SAMPLE_TEXT.split("").map((char, index) => {
+      let className = "";
+      if (index < userInput.length) {
+        className = char === userInput[index] ? "correct" : "incorrect";
+      }
+      return (
+        <span key={index} className={className}>
+          {char}
+        </span>
+      );
+    });
+  };
   return (
     <>
       <h1>Typing Test</h1>
-
-      <div>{sampleText}</div>
-
+      <div>{renderSampleText}</div>
       <textarea
         rows={3}
         value={userInput}
         onChange={handleChange}
         placeholder="Start typing..."
       />
-
       <p>Text length: {userInput.length}</p>
     </>
   );

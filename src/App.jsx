@@ -13,6 +13,7 @@ import FetchApi from "./components/04.useEffect/FetchApi";
 import Form from "./components/04.useEffect/Form";
 import Like from "./components/04.useEffect/Like";
 import Quote from "./components/04.useEffect/Quote";
+import TypingTest from "./components/04.useEffect/TypingTest";
 
 const App = () => {
   return (
@@ -31,7 +32,8 @@ const App = () => {
       {/* <Like /> */}
       {/* <Quote /> */}
       {/* <Counter /> */}
-      <ClearEffect />
+      {/* <ClearEffect /> */}
+      <TypingTest />
     </div>
   );
 };
