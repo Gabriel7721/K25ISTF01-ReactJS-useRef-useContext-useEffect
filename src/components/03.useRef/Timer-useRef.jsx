@@ -1,19 +1,22 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Timer = () => {
   const [startTime, setStartTime] = useState(null);
   const [now, setNow] = useState(null);
+  const id = useRef(null); // Stored Interval ID
 
   function handleStart() {
     setStartTime(Date.now());
     setNow(Date.now());
-    setInterval(() => {
+
+    id.current = setInterval(() => {
       setNow(Date.now());
     }, 10);
   }
 
-  // NOTE: Viết 1 function Stop sử dụng
-  // clearInterval(interval_Id) để ngừng đồng hồ.
+  function handleStop() {
+    clearInterval(id.current);
+  }
 
   let secondsPassed = 0;
   if (startTime != null && now != null) {
