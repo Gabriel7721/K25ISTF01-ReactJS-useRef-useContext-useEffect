@@ -7,9 +7,9 @@ const Quote = () => {
     fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
       .then((res) => res.json())
       .then((data) => {
-        const list = data.messages;
-        // const rand = list.length;
-        setQuote(list);
+        const list = data.messages.personalized;
+        const rand = Math.round(Math.random() * list.length);
+        setQuote(list[rand]);
       });
   }, []);
 
