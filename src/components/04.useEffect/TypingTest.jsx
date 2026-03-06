@@ -30,6 +30,14 @@ const TypingTest = () => {
     };
   }, [isRunning]);
 
+  useEffect(() => {
+    if (userInput === SAMPLE_TEXT && !isFinished) {
+      setIsFinished(true);
+      setIsRunning(false);
+      clearInterval(intervalRef.current);
+    }
+  }, [userInput, isFinished]);
+
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
