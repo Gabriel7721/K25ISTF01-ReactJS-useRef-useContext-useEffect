@@ -6,6 +6,7 @@ import DOM_UseRef from "./components/03.useRef/DOM_UseRef";
 import ScrollIntoView from "./components/03.useRef/ScrollIntoView";
 import Timer from "./components/03.useRef/Timer";
 import TimerUseRef from "./components/03.useRef/Timer-useRef";
+import Count from "./components/04.useEffect/Count";
 
 const App = () => {
   return (
@@ -17,7 +18,8 @@ const App = () => {
       {/* <Timer /> */}
       {/* <TimerUseRef /> */}
       {/* <DOM_UseRef/> */}
-      <ScrollIntoView />
+      {/* <ScrollIntoView /> */}
+      <Count />
     </div>
   );
 };
