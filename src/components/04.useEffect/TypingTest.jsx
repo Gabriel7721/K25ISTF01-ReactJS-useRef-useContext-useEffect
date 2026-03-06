@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./TypingTest.css";
 
 const SAMPLE_TEXT =
@@ -13,8 +13,24 @@ const TypingTest = () => {
   const intervalRef = useRef(null);
   const inputRef = useRef(null);
 
+  useEffect(() => {
+    first;
+
+    return () => {
+      second;
+    };
+  }, [third]);
+  
   const handleChange = (event) => {
     setUserInput(event.target.value);
+  };
+
+  const handleReset = (event) => {
+    setUserInput("");
+    setIsRunning(false);
+    setIsFinished(false);
+    setSeconds(0);
+    clearInterval(intervalRef.current);
   };
 
   const renderSampleText = () => {
@@ -45,6 +61,7 @@ const TypingTest = () => {
       <p>Time: {seconds.toFixed(2)}</p>
       <p>Text length: {userInput.length}</p>
       {isFinished && <p>FINISH!</p>}
+      <button onClick={handleReset}>Reset</button>
     </>
   );
 };
